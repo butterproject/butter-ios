@@ -1,0 +1,27 @@
+platform :ios, '8.4'
+use_frameworks!
+
+source 'https://github.com/danylokostyshyn/private-podspecs.git'
+source 'https://github.com/CocoaPods/Specs'
+
+pod 'private-boost'
+pod 'private-libtorrent'
+pod 'private-openssl'
+
+pod 'SQLite.swift',
+  git: 'https://github.com/stephencelis/SQLite.swift.git'
+
+pod 'SwiftyJSON',
+  git: 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+
+pod 'FloatRatingView',
+  git: 'https://github.com/strekfus/FloatRatingView.git'
+
+pod 'Reachability',
+  git: 'https://github.com/tonymillion/Reachability.git'
+
+pod "XCDYouTubeKit", "~> 2.3.2"
+
+pod 'MobileVLCKit'
+
+pod 'JGProgressHUD'

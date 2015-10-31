@@ -1,0 +1,61 @@
+PODS:
+  - FloatRatingView (1.0.1)
+  - JGProgressHUD (1.3.1)
+  - MobileVLCKit (2.2.1)
+  - private-boost (1.58.0)
+  - private-libtorrent (1.0.6)
+  - private-openssl (1.0.204)
+  - Reachability (3.2)
+  - SQLite.swift (1.0.0.pre)
+  - SwiftyJSON (2.3.0)
+  - XCDYouTubeKit (2.3.2)
+
+DEPENDENCIES:
+  - FloatRatingView (from `https://github.com/strekfus/FloatRatingView.git`)
+  - JGProgressHUD
+  - MobileVLCKit
+  - private-boost
+  - private-libtorrent
+  - private-openssl
+  - Reachability (from `https://github.com/tonymillion/Reachability.git`)
+  - SQLite.swift (from `https://github.com/stephencelis/SQLite.swift.git`)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+  - XCDYouTubeKit (~> 2.3.2)
+
+EXTERNAL SOURCES:
+  FloatRatingView:
+    :git: https://github.com/strekfus/FloatRatingView.git
+  Reachability:
+    :git: https://github.com/tonymillion/Reachability.git
+  SQLite.swift:
+    :git: https://github.com/stephencelis/SQLite.swift.git
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  FloatRatingView:
+    :commit: 34c88cd34588760cc121bb8ab3e177e26fc9002e
+    :git: https://github.com/strekfus/FloatRatingView.git
+  Reachability:
+    :commit: 1c4661fe44b03b6cbe68675c8aa054c6c3db67e6
+    :git: https://github.com/tonymillion/Reachability.git
+  SQLite.swift:
+    :commit: e01cb82f63a7f59c28fc89a79b7f9cb59780a0f4
+    :git: https://github.com/stephencelis/SQLite.swift.git
+  SwiftyJSON:
+    :commit: 83dc3138b14571200ea7f070933a2a510491e997
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  FloatRatingView: 6c4916fc1555fffb67e8b8abbdf08af0d160a0dc
+  JGProgressHUD: 153053a21d81208cb5f659691996bcefce6a9885
+  MobileVLCKit: bb3359b2221316554129beb0c45827803a2de9be
+  private-boost: 390bdadecb82f24bcec47068f4b041acc757d575
+  private-libtorrent: 9f0d4c5e1b3842e3baf5493b66cadb684bb07afd
+  private-openssl: b469f3f9eca633bcc9e888c1f1d4fc27b7ea7c17
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SQLite.swift: 5dfee5c783b93f4c0035c0317a11c3c92cc91910
+  SwiftyJSON: cacfe0373d584585716bd1d43202c24cc66afd65
+  XCDYouTubeKit: 6aff378bcbbf06d058f2c2d2df655c376970ee03
+
+COCOAPODS: 0.39.0

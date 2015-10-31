@@ -1,0 +1,851 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1EE363C85CFCA71C25CFB53E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 769AD55486BB07D7DC76F59A /* Pods.framework */; };
+		510413F51BD04F82001E5A9D /* UIApplication+NetworkActivityIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 510413F41BD04F82001E5A9D /* UIApplication+NetworkActivityIndicator.m */; };
+		513DF63C1BBAC90200E8E6BA /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513DF63A1BBAC90200E8E6BA /* DatabaseManager.swift */; };
+		513DF63D1BBAC90200E8E6BA /* MovieFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513DF63B1BBAC90200E8E6BA /* MovieFavorites.swift */; };
+		514287731BBDE2D30026387B /* WatchedMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514287721BBDE2D30026387B /* WatchedMovies.swift */; };
+		514287751BBDE5410026387B /* WatchedShows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514287741BBDE5410026387B /* WatchedShows.swift */; };
+		5172F7AF1BBDB0D7001B9E5A /* ShowFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5172F7AE1BBDB0D7001B9E5A /* ShowFavorites.swift */; };
+		517338391BD27D9000BCFDE3 /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517338381BD27D9000BCFDE3 /* PlaceholderTextView.swift */; };
+		51766C341BCD7D860049BA2D /* TablePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51766C321BCD7D860049BA2D /* TablePickerView.swift */; };
+		51766C351BCD7D860049BA2D /* TablePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51766C331BCD7D860049BA2D /* TablePickerView.xib */; };
+		51801EDA1BD2850B0019D8DF /* ReportBugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51801ED91BD2850B0019D8DF /* ReportBugViewController.swift */; };
+		51801EDC1BD290500019D8DF /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51801EDB1BD290500019D8DF /* Array+Extension.swift */; };
+		51801EDE1BD295840019D8DF /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51801EDD1BD295840019D8DF /* UIDevice+Extension.swift */; };
+		518A7D211BC5B33F008CABDF /* NSLocale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518A7D201BC5B33F008CABDF /* NSLocale+Extension.swift */; };
+		51A8DB081BCAB59400F5C0D5 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A8DB071BCAB59400F5C0D5 /* SettingsTableViewController.swift */; };
+		51B9F52B1BCA5DA30076D88A /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9F52A1BCA5DA30076D88A /* Dictionary+Extension.swift */; };
+		51B9F52F1BCA60F90076D88A /* ItemOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B9F52E1BCA60F90076D88A /* ItemOverviewController.swift */; };
+		51E14F181BD0402F00A2E9BC /* YIFYSubtitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E14F171BD0402F00A2E9BC /* YIFYSubtitles.swift */; };
+		7E01CC951B6D683100B4317A /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E01CC931B6D681C00B4317A /* libbz2.dylib */; };
+		7E01CC961B6D683200B4317A /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E01CC901B6D67F500B4317A /* libstdc++.6.0.9.dylib */; };
+		7E01CC9B1B6D73B700B4317A /* VDLPlaybackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E01CC991B6D73B700B4317A /* VDLPlaybackViewController.m */; };
+		7E01CC9C1B6D73B700B4317A /* VDLPlaybackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E01CC9A1B6D73B700B4317A /* VDLPlaybackViewController.xib */; };
+		7E01CCA01B6D756E00B4317A /* ButterTorrentStreamer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E01CC9F1B6D756E00B4317A /* ButterTorrentStreamer.mm */; };
+		7E01CCD01B6D7B7000B4317A /* CocoaSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E01CCC81B6D7B7000B4317A /* CocoaSecurity.m */; };
+		7E01CCD11B6D7B7000B4317A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7E01CCC91B6D7B7000B4317A /* LICENSE */; };
+		7E01CCD31B6D7B7000B4317A /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E01CCCF1B6D7B7000B4317A /* Base64.m */; };
+		7E0C10631BBB4A6E00E0C50B /* ILTranslucentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C10621BBB4A6E00E0C50B /* ILTranslucentView.swift */; };
+		7E0C10651BBB778900E0C50B /* TVShowDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C10641BBB778900E0C50B /* TVShowDetailViewController.swift */; };
+		7E20D1451BB818D9000EAB0B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E20D1441BB818D9000EAB0B /* GradientView.swift */; };
+		7E2281EC1BC0B471009F534C /* FavouritesHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2281EB1BC0B471009F534C /* FavouritesHeaderCollectionReusableView.swift */; };
+		7E2A33471B63CCEB00F426D9 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2A33461B63CCEB00F426D9 /* OrderedDictionary.swift */; };
+		7E2A90961BC1FBA9006BC739 /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2A90951BC1FBA9006BC739 /* openssl.framework */; };
+		7E2AD00D1B61D28A001B24BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AD00C1B61D28A001B24BE /* AppDelegate.swift */; };
+		7E2AD00F1B61D299001B24BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E2AD00E1B61D299001B24BE /* Images.xcassets */; };
+		7E2AD0151B61D2A4001B24BE /* AnimeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AD0101B61D2A4001B24BE /* AnimeCollectionViewController.swift */; };
+		7E2AD0161B61D2A4001B24BE /* FavouritesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AD0111B61D2A4001B24BE /* FavouritesCollectionViewController.swift */; };
+		7E2AD0171B61D2A4001B24BE /* MoviesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AD0121B61D2A4001B24BE /* MoviesCollectionViewController.swift */; };
+		7E2AD0181B61D2A4001B24BE /* TVShowsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AD0131B61D2A4001B24BE /* TVShowsCollectionViewController.swift */; };
+		7E2AD0191B61D2A4001B24BE /* WatchlistCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2AD0141B61D2A4001B24BE /* WatchlistCollectionViewController.swift */; };
+		7E2C96A11B64424700476095 /* RestApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2C96A01B64424700476095 /* RestApiManager.swift */; };
+		7E2D473D1B653EDE00611019 /* TVAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D473A1B653EDE00611019 /* TVAPI.swift */; };
+		7E2D473E1B653EDE00611019 /* AnimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D473B1B653EDE00611019 /* AnimeAPI.swift */; };
+		7E2D473F1B653EDE00611019 /* MovieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D473C1B653EDE00611019 /* MovieAPI.swift */; };
+		7E2D47411B65520D00611019 /* TraktTVAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2D47401B65520D00611019 /* TraktTVAPI.swift */; };
+		7E3CFB741B62A4F5002F9E8C /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3CFB731B62A4F5002F9E8C /* MovieDetailViewController.swift */; };
+		7E3CFB791B62B1F5002F9E8C /* ButterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3CFB781B62B1F5002F9E8C /* ButterItem.swift */; };
+		7E3CFB7B1B62B20B002F9E8C /* ButterTorrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3CFB7A1B62B20B002F9E8C /* ButterTorrent.swift */; };
+		7E4EBE8D1B6EE7C60050D742 /* libtorrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E01CCB21B6D797C00B4317A /* libtorrent.framework */; };
+		7E4EBE921B6EE9870050D742 /* libiconv.2.4.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4EBE901B6EE9300050D742 /* libiconv.2.4.0.dylib */; };
+		7E4EBE941B6EEAAF0050D742 /* ButterLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4EBE931B6EEAAF0050D742 /* ButterLoadingViewController.swift */; };
+		7E7D2DA81BC1FE0C00BB3B0E /* boost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E7D2DA71BC1FE0C00BB3B0E /* boost.framework */; };
+		7E7D73571B645CA10018A908 /* PTCoverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7D73561B645CA10018A908 /* PTCoverCollectionViewCell.swift */; };
+		7E826EAA1B670B1700B85C93 /* ButterAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E826EA91B670B1700B85C93 /* ButterAPIManager.swift */; };
+		7EA9DF111B61A19A00BAC6AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA9DF0F1B61A19A00BAC6AF /* Main.storyboard */; };
+		7EA9DF161B61A19A00BAC6AF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EA9DF141B61A19A00BAC6AF /* LaunchScreen.xib */; };
+		7EB833C01BC4791E00FF31B7 /* PTEpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB833BF1BC4791E00FF31B7 /* PTEpisodeTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7EFFD98A1BA4964C0071910B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		36CF0DAC69CC8451934ECFB3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		510413F31BD04F82001E5A9D /* UIApplication+NetworkActivityIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIApplication+NetworkActivityIndicator.h"; path = "Vendor/Extensions/UIApplication+NetworkActivityIndicator.h"; sourceTree = "<group>"; };
+		510413F41BD04F82001E5A9D /* UIApplication+NetworkActivityIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+NetworkActivityIndicator.m"; path = "Vendor/Extensions/UIApplication+NetworkActivityIndicator.m"; sourceTree = "<group>"; };
+		513DF63A1BBAC90200E8E6BA /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = "Local Database/DatabaseManager.swift"; sourceTree = "<group>"; };
+		513DF63B1BBAC90200E8E6BA /* MovieFavorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieFavorites.swift; path = "Local Database/MovieFavorites.swift"; sourceTree = "<group>"; };
+		514287721BBDE2D30026387B /* WatchedMovies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatchedMovies.swift; path = "Local Database/WatchedMovies.swift"; sourceTree = "<group>"; };
+		514287741BBDE5410026387B /* WatchedShows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatchedShows.swift; path = "Local Database/WatchedShows.swift"; sourceTree = "<group>"; };
+		5172F7AE1BBDB0D7001B9E5A /* ShowFavorites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowFavorites.swift; path = "Local Database/ShowFavorites.swift"; sourceTree = "<group>"; };
+		517338381BD27D9000BCFDE3 /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceholderTextView.swift; path = UI/Views/PlaceholderTextView.swift; sourceTree = "<group>"; };
+		51766C321BCD7D860049BA2D /* TablePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TablePickerView.swift; path = UI/Views/TablePickerView.swift; sourceTree = "<group>"; };
+		51766C331BCD7D860049BA2D /* TablePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TablePickerView.xib; path = UI/Views/TablePickerView.xib; sourceTree = "<group>"; };
+		51801ED91BD2850B0019D8DF /* ReportBugViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportBugViewController.swift; path = UI/ViewControllers/ReportBugViewController.swift; sourceTree = "<group>"; };
+		51801EDB1BD290500019D8DF /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Extension.swift"; path = "Vendor/Extensions/Array+Extension.swift"; sourceTree = "<group>"; };
+		51801EDD1BD295840019D8DF /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extension.swift"; path = "Vendor/Extensions/UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		518A7D201BC5B33F008CABDF /* NSLocale+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSLocale+Extension.swift"; path = "Vendor/Extensions/NSLocale+Extension.swift"; sourceTree = "<group>"; };
+		51A8DB071BCAB59400F5C0D5 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsTableViewController.swift; path = UI/ViewControllers/SettingsTableViewController.swift; sourceTree = "<group>"; };
+		51B9F52A1BCA5DA30076D88A /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+Extension.swift"; path = "Vendor/Extensions/Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		51B9F52E1BCA60F90076D88A /* ItemOverviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemOverviewController.swift; path = UI/CollectionViewControllers/ItemOverviewController.swift; sourceTree = "<group>"; };
+		51E14F171BD0402F00A2E9BC /* YIFYSubtitles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YIFYSubtitles.swift; path = API/Providers/Subs/YIFYSubtitles.swift; sourceTree = "<group>"; };
+		769AD55486BB07D7DC76F59A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E01CC901B6D67F500B4317A /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		7E01CC931B6D681C00B4317A /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
+		7E01CC981B6D73B700B4317A /* VDLPlaybackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDLPlaybackViewController.h; sourceTree = "<group>"; };
+		7E01CC991B6D73B700B4317A /* VDLPlaybackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDLPlaybackViewController.m; sourceTree = "<group>"; };
+		7E01CC9A1B6D73B700B4317A /* VDLPlaybackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDLPlaybackViewController.xib; sourceTree = "<group>"; };
+		7E01CC9E1B6D756E00B4317A /* ButterTorrentStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButterTorrentStreamer.h; sourceTree = "<group>"; };
+		7E01CC9F1B6D756E00B4317A /* ButterTorrentStreamer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ButterTorrentStreamer.mm; sourceTree = "<group>"; };
+		7E01CCB21B6D797C00B4317A /* libtorrent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libtorrent.framework; path = Resources/Frameworks/libtorrent.framework; sourceTree = "<group>"; };
+		7E01CCC71B6D7B7000B4317A /* CocoaSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaSecurity.h; sourceTree = "<group>"; };
+		7E01CCC81B6D7B7000B4317A /* CocoaSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocoaSecurity.m; sourceTree = "<group>"; };
+		7E01CCC91B6D7B7000B4317A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7E01CCCE1B6D7B7000B4317A /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		7E01CCCF1B6D7B7000B4317A /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		7E0C10621BBB4A6E00E0C50B /* ILTranslucentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILTranslucentView.swift; sourceTree = "<group>"; };
+		7E0C10641BBB778900E0C50B /* TVShowDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVShowDetailViewController.swift; path = UI/ViewControllers/TVShowDetailViewController.swift; sourceTree = "<group>"; };
+		7E20D1441BB818D9000EAB0B /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = UI/Views/GradientView.swift; sourceTree = "<group>"; };
+		7E2281EB1BC0B471009F534C /* FavouritesHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesHeaderCollectionReusableView.swift; path = UI/CollectionReusableViews/FavouritesHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		7E2A33461B63CCEB00F426D9 /* OrderedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderedDictionary.swift; path = Vendor/SwiftDataStructures/OrderedDictionary.swift; sourceTree = "<group>"; };
+		7E2A334E1B63D8FB00F426D9 /* Butter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Butter-Bridging-Header.h"; path = "Resources/Butter-Bridging-Header.h"; sourceTree = "<group>"; };
+		7E2A90951BC1FBA9006BC739 /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = openssl.framework; path = Resources/Frameworks/openssl.framework; sourceTree = "<group>"; };
+		7E2AD00C1B61D28A001B24BE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Startup/AppDelegate.swift; sourceTree = "<group>"; };
+		7E2AD00E1B61D299001B24BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
+		7E2AD0101B61D2A4001B24BE /* AnimeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimeCollectionViewController.swift; path = UI/CollectionViewControllers/AnimeCollectionViewController.swift; sourceTree = "<group>"; };
+		7E2AD0111B61D2A4001B24BE /* FavouritesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavouritesCollectionViewController.swift; path = UI/CollectionViewControllers/FavouritesCollectionViewController.swift; sourceTree = "<group>"; };
+		7E2AD0121B61D2A4001B24BE /* MoviesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesCollectionViewController.swift; path = UI/CollectionViewControllers/MoviesCollectionViewController.swift; sourceTree = "<group>"; };
+		7E2AD0131B61D2A4001B24BE /* TVShowsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVShowsCollectionViewController.swift; path = UI/CollectionViewControllers/TVShowsCollectionViewController.swift; sourceTree = "<group>"; };
+		7E2AD0141B61D2A4001B24BE /* WatchlistCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatchlistCollectionViewController.swift; path = UI/CollectionViewControllers/WatchlistCollectionViewController.swift; sourceTree = "<group>"; };
+		7E2C96A01B64424700476095 /* RestApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestApiManager.swift; path = API/RestApiManager.swift; sourceTree = "<group>"; };
+		7E2D473A1B653EDE00611019 /* TVAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVAPI.swift; path = API/Providers/TVAPI.swift; sourceTree = "<group>"; };
+		7E2D473B1B653EDE00611019 /* AnimeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimeAPI.swift; path = API/Providers/AnimeAPI.swift; sourceTree = "<group>"; };
+		7E2D473C1B653EDE00611019 /* MovieAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieAPI.swift; path = API/Providers/MovieAPI.swift; sourceTree = "<group>"; };
+		7E2D47401B65520D00611019 /* TraktTVAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TraktTVAPI.swift; path = API/Providers/TraktTVAPI.swift; sourceTree = "<group>"; };
+		7E3CFB731B62A4F5002F9E8C /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieDetailViewController.swift; path = UI/ViewControllers/MovieDetailViewController.swift; sourceTree = "<group>"; };
+		7E3CFB781B62B1F5002F9E8C /* ButterItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButterItem.swift; path = API/ButterItem.swift; sourceTree = "<group>"; };
+		7E3CFB7A1B62B20B002F9E8C /* ButterTorrent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButterTorrent.swift; path = API/ButterTorrent.swift; sourceTree = "<group>"; };
+		7E4EBE901B6EE9300050D742 /* libiconv.2.4.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.4.0.dylib; path = usr/lib/libiconv.2.4.0.dylib; sourceTree = SDKROOT; };
+		7E4EBE931B6EEAAF0050D742 /* ButterLoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButterLoadingViewController.swift; path = UI/ViewControllers/ButterLoadingViewController.swift; sourceTree = "<group>"; };
+		7E7D2DA71BC1FE0C00BB3B0E /* boost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = boost.framework; path = Resources/Frameworks/boost.framework; sourceTree = "<group>"; };
+		7E7D73561B645CA10018A908 /* PTCoverCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PTCoverCollectionViewCell.swift; path = UI/CollectionViewCells/PTCoverCollectionViewCell.swift; sourceTree = "<group>"; };
+		7E826EA91B670B1700B85C93 /* ButterAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButterAPIManager.swift; path = API/ButterAPIManager.swift; sourceTree = "<group>"; };
+		7EA9DF041B61A19A00BAC6AF /* Butter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Butter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EA9DF081B61A19A00BAC6AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EA9DF101B61A19A00BAC6AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7EA9DF151B61A19A00BAC6AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7EB833BF1BC4791E00FF31B7 /* PTEpisodeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PTEpisodeTableViewCell.swift; path = UI/TableViewCells/PTEpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		9118191542C97282F9241C02 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EA9DF011B61A19A00BAC6AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E4EBE921B6EE9870050D742 /* libiconv.2.4.0.dylib in Frameworks */,
+				7E2A90961BC1FBA9006BC739 /* openssl.framework in Frameworks */,
+				7E01CC951B6D683100B4317A /* libbz2.dylib in Frameworks */,
+				7E4EBE8D1B6EE7C60050D742 /* libtorrent.framework in Frameworks */,
+				7E01CC961B6D683200B4317A /* libstdc++.6.0.9.dylib in Frameworks */,
+				7E7D2DA81BC1FE0C00BB3B0E /* boost.framework in Frameworks */,
+				1EE363C85CFCA71C25CFB53E /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		513DF6391BBAC8ED00E8E6BA /* Local Database */ = {
+			isa = PBXGroup;
+			children = (
+				513DF63A1BBAC90200E8E6BA /* DatabaseManager.swift */,
+				513DF63B1BBAC90200E8E6BA /* MovieFavorites.swift */,
+				5172F7AE1BBDB0D7001B9E5A /* ShowFavorites.swift */,
+				514287721BBDE2D30026387B /* WatchedMovies.swift */,
+				514287741BBDE5410026387B /* WatchedShows.swift */,
+			);
+			name = "Local Database";
+			sourceTree = "<group>";
+		};
+		518A7D1F1BC5B31B008CABDF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				510413F31BD04F82001E5A9D /* UIApplication+NetworkActivityIndicator.h */,
+				510413F41BD04F82001E5A9D /* UIApplication+NetworkActivityIndicator.m */,
+				518A7D201BC5B33F008CABDF /* NSLocale+Extension.swift */,
+				51B9F52A1BCA5DA30076D88A /* Dictionary+Extension.swift */,
+				51801EDB1BD290500019D8DF /* Array+Extension.swift */,
+				51801EDD1BD295840019D8DF /* UIDevice+Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		51E14F161BD03FFE00A2E9BC /* Subs */ = {
+			isa = PBXGroup;
+			children = (
+				51E14F171BD0402F00A2E9BC /* YIFYSubtitles.swift */,
+			);
+			name = Subs;
+			sourceTree = "<group>";
+		};
+		7E01CC921B6D67FF00B4317A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E7D2DA71BC1FE0C00BB3B0E /* boost.framework */,
+				7E2A90951BC1FBA9006BC739 /* openssl.framework */,
+				7E01CCB21B6D797C00B4317A /* libtorrent.framework */,
+				7E01CC931B6D681C00B4317A /* libbz2.dylib */,
+				7E4EBE901B6EE9300050D742 /* libiconv.2.4.0.dylib */,
+				7E01CC901B6D67F500B4317A /* libstdc++.6.0.9.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E01CC971B6D73B700B4317A /* VDLPlaybackViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7E01CC981B6D73B700B4317A /* VDLPlaybackViewController.h */,
+				7E01CC991B6D73B700B4317A /* VDLPlaybackViewController.m */,
+				7E01CC9A1B6D73B700B4317A /* VDLPlaybackViewController.xib */,
+			);
+			name = VDLPlaybackViewController;
+			path = UI/ViewControllers/VDLPlaybackViewController;
+			sourceTree = "<group>";
+		};
+		7E01CC9D1B6D756E00B4317A /* Torrent-Streamer */ = {
+			isa = PBXGroup;
+			children = (
+				7E01CC9E1B6D756E00B4317A /* ButterTorrentStreamer.h */,
+				7E01CC9F1B6D756E00B4317A /* ButterTorrentStreamer.mm */,
+			);
+			path = "Torrent-Streamer";
+			sourceTree = "<group>";
+		};
+		7E01CCC51B6D7B7000B4317A /* CocoaSecurity */ = {
+			isa = PBXGroup;
+			children = (
+				7E01CCC61B6D7B7000B4317A /* CocoaSecurity */,
+				7E01CCC91B6D7B7000B4317A /* LICENSE */,
+				7E01CCCB1B6D7B7000B4317A /* submodules */,
+			);
+			name = CocoaSecurity;
+			path = Vendor/CocoaSecurity;
+			sourceTree = "<group>";
+		};
+		7E01CCC61B6D7B7000B4317A /* CocoaSecurity */ = {
+			isa = PBXGroup;
+			children = (
+				7E01CCC71B6D7B7000B4317A /* CocoaSecurity.h */,
+				7E01CCC81B6D7B7000B4317A /* CocoaSecurity.m */,
+			);
+			path = CocoaSecurity;
+			sourceTree = "<group>";
+		};
+		7E01CCCB1B6D7B7000B4317A /* submodules */ = {
+			isa = PBXGroup;
+			children = (
+				7E01CCCC1B6D7B7000B4317A /* Base64 */,
+			);
+			path = submodules;
+			sourceTree = "<group>";
+		};
+		7E01CCCC1B6D7B7000B4317A /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				7E01CCCD1B6D7B7000B4317A /* Base64 */,
+			);
+			path = Base64;
+			sourceTree = "<group>";
+		};
+		7E01CCCD1B6D7B7000B4317A /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				7E01CCCE1B6D7B7000B4317A /* Base64.h */,
+				7E01CCCF1B6D7B7000B4317A /* Base64.m */,
+			);
+			path = Base64;
+			sourceTree = "<group>";
+		};
+		7E01FAFC1B645C35008DB976 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				7E7D73561B645CA10018A908 /* PTCoverCollectionViewCell.swift */,
+			);
+			name = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		7E0C10611BBB4A6E00E0C50B /* ILTranslucentView */ = {
+			isa = PBXGroup;
+			children = (
+				7E0C10621BBB4A6E00E0C50B /* ILTranslucentView.swift */,
+			);
+			name = ILTranslucentView;
+			path = Vendor/ILTranslucentView;
+			sourceTree = "<group>";
+		};
+		7E20D1431BB81898000EAB0B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E20D1441BB818D9000EAB0B /* GradientView.swift */,
+				51766C321BCD7D860049BA2D /* TablePickerView.swift */,
+				51766C331BCD7D860049BA2D /* TablePickerView.xib */,
+				517338381BD27D9000BCFDE3 /* PlaceholderTextView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7E2A33411B63C94300F426D9 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				7E0C10611BBB4A6E00E0C50B /* ILTranslucentView */,
+				7E01CCC51B6D7B7000B4317A /* CocoaSecurity */,
+				7E2A33451B63CCBA00F426D9 /* SwiftDataStructures */,
+				518A7D1F1BC5B31B008CABDF /* Extensions */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		7E2A33451B63CCBA00F426D9 /* SwiftDataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				7E2A33461B63CCEB00F426D9 /* OrderedDictionary.swift */,
+			);
+			name = SwiftDataStructures;
+			sourceTree = "<group>";
+		};
+		7E2D47391B653EAF00611019 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				51E14F161BD03FFE00A2E9BC /* Subs */,
+				7E2D473C1B653EDE00611019 /* MovieAPI.swift */,
+				7E2D473A1B653EDE00611019 /* TVAPI.swift */,
+				7E2D473B1B653EDE00611019 /* AnimeAPI.swift */,
+				7E2D47401B65520D00611019 /* TraktTVAPI.swift */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		7E3CFB751B62A662002F9E8C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				7E2D47391B653EAF00611019 /* Providers */,
+				7E2C96A01B64424700476095 /* RestApiManager.swift */,
+				7E826EA91B670B1700B85C93 /* ButterAPIManager.swift */,
+				7E3CFB781B62B1F5002F9E8C /* ButterItem.swift */,
+				7E3CFB7A1B62B20B002F9E8C /* ButterTorrent.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		7E5BA38A1BBD32F7004701E3 /* CollectionReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				7E2281EB1BC0B471009F534C /* FavouritesHeaderCollectionReusableView.swift */,
+			);
+			name = CollectionReusableViews;
+			sourceTree = "<group>";
+		};
+		7EA9DEFB1B61A19A00BAC6AF = {
+			isa = PBXGroup;
+			children = (
+				7EA9DF061B61A19A00BAC6AF /* Butter */,
+				7EA9DF051B61A19A00BAC6AF /* Products */,
+				D9956A72B34CC0BC558A4EA6 /* Pods */,
+				E10396330A8E2F68E982223B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7EA9DF051B61A19A00BAC6AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EA9DF041B61A19A00BAC6AF /* Butter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EA9DF061B61A19A00BAC6AF /* Butter */ = {
+			isa = PBXGroup;
+			children = (
+				7E2A33411B63C94300F426D9 /* Vendor */,
+				7EA9DF2E1B61A21800BAC6AF /* Startup */,
+				7E3CFB751B62A662002F9E8C /* API */,
+				513DF6391BBAC8ED00E8E6BA /* Local Database */,
+				7E01CC9D1B6D756E00B4317A /* Torrent-Streamer */,
+				7EA9DF2B1B61A1E500BAC6AF /* UI */,
+				7EA9DF2F1B61A22A00BAC6AF /* Resources */,
+				7EA9DF071B61A19A00BAC6AF /* Supporting Files */,
+			);
+			path = Butter;
+			sourceTree = "<group>";
+		};
+		7EA9DF071B61A19A00BAC6AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EA9DF081B61A19A00BAC6AF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EA9DF2B1B61A1E500BAC6AF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7EA9DF0F1B61A19A00BAC6AF /* Main.storyboard */,
+				7E20D1431BB81898000EAB0B /* Views */,
+				7EF929E71B62A2AC003EFDB0 /* ViewControllers */,
+				7EA9DF2C1B61A1EC00BAC6AF /* CollectionViewControllers */,
+				7E01FAFC1B645C35008DB976 /* CollectionViewCells */,
+				7E5BA38A1BBD32F7004701E3 /* CollectionReusableViews */,
+				7EB833BE1BC478DB00FF31B7 /* TableViewCells */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		7EA9DF2C1B61A1EC00BAC6AF /* CollectionViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				51B9F52E1BCA60F90076D88A /* ItemOverviewController.swift */,
+				7E2AD0121B61D2A4001B24BE /* MoviesCollectionViewController.swift */,
+				7E2AD0131B61D2A4001B24BE /* TVShowsCollectionViewController.swift */,
+				7E2AD0101B61D2A4001B24BE /* AnimeCollectionViewController.swift */,
+				7E2AD0111B61D2A4001B24BE /* FavouritesCollectionViewController.swift */,
+				7E2AD0141B61D2A4001B24BE /* WatchlistCollectionViewController.swift */,
+			);
+			name = CollectionViewControllers;
+			sourceTree = "<group>";
+		};
+		7EA9DF2E1B61A21800BAC6AF /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				7E2AD00C1B61D28A001B24BE /* AppDelegate.swift */,
+				7EA9DF141B61A19A00BAC6AF /* LaunchScreen.xib */,
+			);
+			name = Startup;
+			sourceTree = "<group>";
+		};
+		7EA9DF2F1B61A22A00BAC6AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E01CC921B6D67FF00B4317A /* Frameworks */,
+				7E2AD00E1B61D299001B24BE /* Images.xcassets */,
+				7E2A334E1B63D8FB00F426D9 /* Butter-Bridging-Header.h */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7EB833BE1BC478DB00FF31B7 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				7EB833BF1BC4791E00FF31B7 /* PTEpisodeTableViewCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		7EF929E71B62A2AC003EFDB0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E01CC971B6D73B700B4317A /* VDLPlaybackViewController */,
+				7E3CFB731B62A4F5002F9E8C /* MovieDetailViewController.swift */,
+				7E0C10641BBB778900E0C50B /* TVShowDetailViewController.swift */,
+				7E4EBE931B6EEAAF0050D742 /* ButterLoadingViewController.swift */,
+				51A8DB071BCAB59400F5C0D5 /* SettingsTableViewController.swift */,
+				51801ED91BD2850B0019D8DF /* ReportBugViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D9956A72B34CC0BC558A4EA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9118191542C97282F9241C02 /* Pods.debug.xcconfig */,
+				36CF0DAC69CC8451934ECFB3 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E10396330A8E2F68E982223B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				769AD55486BB07D7DC76F59A /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7EA9DF031B61A19A00BAC6AF /* Butter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EA9DF251B61A19A00BAC6AF /* Build configuration list for PBXNativeTarget "Butter" */;
+			buildPhases = (
+				B705FC57F744F7EF76C85593 /* Check Pods Manifest.lock */,
+				7EA9DF001B61A19A00BAC6AF /* Sources */,
+				7EA9DF011B61A19A00BAC6AF /* Frameworks */,
+				7EA9DF021B61A19A00BAC6AF /* Resources */,
+				7EFFD98A1BA4964C0071910B /* Embed Frameworks */,
+				F6AE1BDA3EC023528B3A05D9 /* Embed Pods Frameworks */,
+				E1A47847FF86016F64076CF8 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Butter;
+			productName = "Popcorn-Time";
+			productReference = 7EA9DF041B61A19A00BAC6AF /* Butter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EA9DEFC1B61A19A00BAC6AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = popcorntime;
+				TargetAttributes = {
+					7EA9DF031B61A19A00BAC6AF = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = 7EA9DEFF1B61A19A00BAC6AF /* Build configuration list for PBXProject "Butter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7EA9DEFB1B61A19A00BAC6AF;
+			productRefGroup = 7EA9DF051B61A19A00BAC6AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EA9DF031B61A19A00BAC6AF /* Butter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7EA9DF021B61A19A00BAC6AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E01CCD11B6D7B7000B4317A /* LICENSE in Resources */,
+				7E2AD00F1B61D299001B24BE /* Images.xcassets in Resources */,
+				7EA9DF111B61A19A00BAC6AF /* Main.storyboard in Resources */,
+				51766C351BCD7D860049BA2D /* TablePickerView.xib in Resources */,
+				7E01CC9C1B6D73B700B4317A /* VDLPlaybackViewController.xib in Resources */,
+				7EA9DF161B61A19A00BAC6AF /* LaunchScreen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B705FC57F744F7EF76C85593 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E1A47847FF86016F64076CF8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6AE1BDA3EC023528B3A05D9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EA9DF001B61A19A00BAC6AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E0C10631BBB4A6E00E0C50B /* ILTranslucentView.swift in Sources */,
+				51B9F52F1BCA60F90076D88A /* ItemOverviewController.swift in Sources */,
+				514287751BBDE5410026387B /* WatchedShows.swift in Sources */,
+				7E2D473E1B653EDE00611019 /* AnimeAPI.swift in Sources */,
+				7E2AD0161B61D2A4001B24BE /* FavouritesCollectionViewController.swift in Sources */,
+				51A8DB081BCAB59400F5C0D5 /* SettingsTableViewController.swift in Sources */,
+				7E2D47411B65520D00611019 /* TraktTVAPI.swift in Sources */,
+				513DF63D1BBAC90200E8E6BA /* MovieFavorites.swift in Sources */,
+				7EB833C01BC4791E00FF31B7 /* PTEpisodeTableViewCell.swift in Sources */,
+				51766C341BCD7D860049BA2D /* TablePickerView.swift in Sources */,
+				7E3CFB791B62B1F5002F9E8C /* ButterItem.swift in Sources */,
+				51E14F181BD0402F00A2E9BC /* YIFYSubtitles.swift in Sources */,
+				7E7D73571B645CA10018A908 /* PTCoverCollectionViewCell.swift in Sources */,
+				5172F7AF1BBDB0D7001B9E5A /* ShowFavorites.swift in Sources */,
+				517338391BD27D9000BCFDE3 /* PlaceholderTextView.swift in Sources */,
+				7E0C10651BBB778900E0C50B /* TVShowDetailViewController.swift in Sources */,
+				7E01CCD31B6D7B7000B4317A /* Base64.m in Sources */,
+				7E2AD0181B61D2A4001B24BE /* TVShowsCollectionViewController.swift in Sources */,
+				513DF63C1BBAC90200E8E6BA /* DatabaseManager.swift in Sources */,
+				514287731BBDE2D30026387B /* WatchedMovies.swift in Sources */,
+				7E4EBE941B6EEAAF0050D742 /* ButterLoadingViewController.swift in Sources */,
+				7E3CFB7B1B62B20B002F9E8C /* ButterTorrent.swift in Sources */,
+				7E2AD0191B61D2A4001B24BE /* WatchlistCollectionViewController.swift in Sources */,
+				7E2281EC1BC0B471009F534C /* FavouritesHeaderCollectionReusableView.swift in Sources */,
+				51801EDE1BD295840019D8DF /* UIDevice+Extension.swift in Sources */,
+				7E2AD0171B61D2A4001B24BE /* MoviesCollectionViewController.swift in Sources */,
+				7E2D473F1B653EDE00611019 /* MovieAPI.swift in Sources */,
+				518A7D211BC5B33F008CABDF /* NSLocale+Extension.swift in Sources */,
+				7E3CFB741B62A4F5002F9E8C /* MovieDetailViewController.swift in Sources */,
+				510413F51BD04F82001E5A9D /* UIApplication+NetworkActivityIndicator.m in Sources */,
+				7E01CCA01B6D756E00B4317A /* ButterTorrentStreamer.mm in Sources */,
+				7E01CC9B1B6D73B700B4317A /* VDLPlaybackViewController.m in Sources */,
+				7E2D473D1B653EDE00611019 /* TVAPI.swift in Sources */,
+				7E2A33471B63CCEB00F426D9 /* OrderedDictionary.swift in Sources */,
+				7E2AD00D1B61D28A001B24BE /* AppDelegate.swift in Sources */,
+				51B9F52B1BCA5DA30076D88A /* Dictionary+Extension.swift in Sources */,
+				7E2C96A11B64424700476095 /* RestApiManager.swift in Sources */,
+				51801EDC1BD290500019D8DF /* Array+Extension.swift in Sources */,
+				51801EDA1BD2850B0019D8DF /* ReportBugViewController.swift in Sources */,
+				7E826EAA1B670B1700B85C93 /* ButterAPIManager.swift in Sources */,
+				7E20D1451BB818D9000EAB0B /* GradientView.swift in Sources */,
+				7E2AD0151B61D2A4001B24BE /* AnimeCollectionViewController.swift in Sources */,
+				7E01CCD01B6D7B7000B4317A /* CocoaSecurity.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7EA9DF0F1B61A19A00BAC6AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EA9DF101B61A19A00BAC6AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7EA9DF141B61A19A00BAC6AF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EA9DF151B61A19A00BAC6AF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7EA9DF231B61A19A00BAC6AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7EA9DF241B61A19A00BAC6AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EA9DF261B61A19A00BAC6AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9118191542C97282F9241C02 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Butter/Resources/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Butter/Resources/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Butter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LIBTOOLFLAGS = "$(OTHER_LDFLAGS)";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.butterproject.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos9.1;
+				SWIFT_OBJC_BRIDGING_HEADER = "Butter/Resources/Butter-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		7EA9DF271B61A19A00BAC6AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36CF0DAC69CC8451934ECFB3 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Butter/Resources/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Butter/Resources/Frameworks",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Butter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LIBTOOLFLAGS = "$(OTHER_LDFLAGS)";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.butterproject.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos9.1;
+				SWIFT_OBJC_BRIDGING_HEADER = "Butter/Resources/Butter-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EA9DEFF1B61A19A00BAC6AF /* Build configuration list for PBXProject "Butter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EA9DF231B61A19A00BAC6AF /* Debug */,
+				7EA9DF241B61A19A00BAC6AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EA9DF251B61A19A00BAC6AF /* Build configuration list for PBXNativeTarget "Butter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EA9DF261B61A19A00BAC6AF /* Debug */,
+				7EA9DF271B61A19A00BAC6AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7EA9DEFC1B61A19A00BAC6AF /* Project object */;
+}

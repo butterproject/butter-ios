@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9052" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9040"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TablePickerView" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="d7U-AW-MUe" id="Qwz-p9-cBa"/>
+                <outlet property="tableView" destination="Ieb-Aw-4RQ" id="K24-Am-R87"/>
+                <outlet property="toolbar" destination="UQi-yq-1xJ" id="hYp-1h-xYj"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Ppx-7O-qYq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="UQi-yq-1xJ">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <animations/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Zx1-gq-hT7"/>
+                        <barButtonItem title="Done" style="done" id="d7U-AW-MUe">
+                            <connections>
+                                <action selector="done:" destination="-1" id="VA6-gY-etP"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ieb-Aw-4RQ">
+                    <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                    <animations/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="VdC-S5-72a"/>
+                        <outlet property="delegate" destination="-1" id="rAF-yY-hDj"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <animations/>
+            <constraints>
+                <constraint firstItem="Ieb-Aw-4RQ" firstAttribute="top" secondItem="UQi-yq-1xJ" secondAttribute="bottom" id="2i4-X1-y4D"/>
+                <constraint firstAttribute="trailing" secondItem="UQi-yq-1xJ" secondAttribute="trailing" id="AYm-rE-ee1"/>
+                <constraint firstAttribute="bottom" secondItem="Ieb-Aw-4RQ" secondAttribute="bottom" id="HBk-m8-ERi"/>
+                <constraint firstItem="UQi-yq-1xJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="M86-XX-RvM"/>
+                <constraint firstItem="UQi-yq-1xJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Syi-ct-ayq"/>
+                <constraint firstAttribute="trailing" secondItem="Ieb-Aw-4RQ" secondAttribute="trailing" id="jzF-iE-vnh"/>
+                <constraint firstItem="Ieb-Aw-4RQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="li5-Ta-yfT"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+        </view>
+    </objects>
+</document>
