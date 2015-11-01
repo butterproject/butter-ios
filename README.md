@@ -29,7 +29,7 @@ This project uses [CocoaPods](http://cocoapods.org/).
 $ git clone https://github.com/butterproject/butter-ios.git butter-ios
 $ cd butter-ios/
 $ pod install
-$ open Butter.xcodeproj/
+$ open Butter.xcworkspace
 ```
 Make sure you save classes to subdirectories like the file groups in Xcode to keep files organised.
 
