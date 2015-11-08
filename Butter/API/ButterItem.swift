@@ -45,6 +45,19 @@ class ButterItem {
         }
     }
     
+    init(id:Int,torrentURL: String, quality: String, size: String) {
+        self.id = id
+        let tor = ButterTorrent(
+            url: torrentURL,
+            seeds: 0,
+            peers: 0,
+            quality: quality,
+            size: size,
+            hash: "")
+        
+        self.torrents[quality] = tor
+    }
+    
     init(id:Int,torrents: [ButterTorrent]) {
         self.id = id
         for tor in torrents {

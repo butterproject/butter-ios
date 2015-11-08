@@ -11,7 +11,7 @@ import Foundation
 class ButterAPIManager: NSObject {
     static let sharedInstance = ButterAPIManager()
     
-    let moviesAPIEndpoint: String = "" // ToDo: Add Vodo
+    let moviesAPIEndpoint: String = "http://vodo.net/popcorn" // ToDo: Add Vodo
     let moviesAPIEndpointCloudFlareHost : String = ""
     let TVShowsAPIEndpoint: String = ""
     let animeAPIEndpoint: String = ""

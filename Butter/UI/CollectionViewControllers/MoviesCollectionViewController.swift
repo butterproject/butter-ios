@@ -16,7 +16,7 @@ class MoviesCollectionViewController: ItemOverviewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Movies"
+        self.title = "VODO"
 		
 		self.tablePickerView?.setSourceArray(MovieAPI.genres)
         self.setSearchBarPlaceholderTo("Search for a Movie, Actor or Director...")
@@ -93,7 +93,7 @@ class MoviesCollectionViewController: ItemOverviewController {
         }
         
         if (indexPath.row == tmpCache.count-1) {
-			self.reloadItems()
+			//self.reloadItems()
         }
         
         // Configure the cell

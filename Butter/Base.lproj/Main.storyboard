@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A279b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -11,7 +11,7 @@
         <!--Settings-->
         <scene sceneID="3Jy-vX-Edc">
             <objects>
-                <tableViewController storyboardIdentifier="SettingsView" title="Settings" id="Nzg-35-ncs" customClass="SettingsTableViewController" customModule="Popcorn_Time_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SettingsView" title="Settings" id="Nzg-35-ncs" customClass="SettingsTableViewController" customModule="Butter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="suN-6k-bbx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -306,7 +306,7 @@
         <!--Report a Bug-->
         <scene sceneID="S4r-VR-xDT">
             <objects>
-                <tableViewController title="Settings" id="XFd-LC-RJ2" userLabel="Report a Bug" customClass="ReportBugViewController" customModule="Popcorn_Time_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Settings" id="XFd-LC-RJ2" userLabel="Report a Bug" customClass="ReportBugViewController" customModule="Butter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ZIR-my-0Ha">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -452,7 +452,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="179.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eOC-2B-n8N" customClass="PlaceholderTextView" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eOC-2B-n8N" customClass="PlaceholderTextView" customModule="Butter" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="0.0" width="584" height="166.5"/>
                                                     <animations/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -508,7 +508,7 @@
         <!--Movies Collection View Controller-->
         <scene sceneID="LNp-Dw-OFR">
             <objects>
-                <collectionViewController id="6iR-Nf-9ow" customClass="MoviesCollectionViewController" customModule="Popcorn_Time_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="6iR-Nf-9ow" customClass="MoviesCollectionViewController" customModule="Butter" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Y4Z-Mw-YKY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -521,7 +521,7 @@
                             <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="coverCell" id="bjK-3y-RkM" customClass="PTCoverCollectionViewCell" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="coverCell" id="bjK-3y-RkM" customClass="PTCoverCollectionViewCell" customModule="Butter" customModuleProvider="target">
                                 <rect key="frame" x="5" y="69" width="193" height="280"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -532,7 +532,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="193" height="280"/>
                                             <animations/>
                                         </imageView>
-                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fl-PX-sSf" customClass="GradientView" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fl-PX-sSf" customClass="GradientView" customModule="Butter" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="216" width="193" height="64"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Kd-9q-LLN">
@@ -640,7 +640,7 @@
         <!--Movie Detail View Controller-->
         <scene sceneID="LLR-Ma-PxU">
             <objects>
-                <viewController storyboardIdentifier="movieDetailsView" id="jiq-29-wuW" customClass="MovieDetailViewController" customModule="Popcorn_Time_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="movieDetailsView" id="jiq-29-wuW" customClass="MovieDetailViewController" customModule="Butter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zOI-nH-BpP"/>
                         <viewControllerLayoutGuide type="bottom" id="zTu-m9-c0P"/>
@@ -672,7 +672,7 @@
                                                     </mask>
                                                 </variation>
                                             </imageView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfC-6i-Zy3" customClass="ILTranslucentView" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfC-6i-Zy3" customClass="ILTranslucentView" customModule="Butter" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="232" width="600" height="600"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="o9t-sX-gCp">
@@ -816,7 +816,7 @@
                                     </mask>
                                 </variation>
                             </scrollView>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tzL-rj-szr" userLabel="BottomBar" customClass="ILTranslucentView" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tzL-rj-szr" userLabel="BottomBar" customClass="ILTranslucentView" customModule="Butter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="450" width="600" height="101"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKA-Gl-R8s">
@@ -877,7 +877,7 @@
                                     <constraint firstItem="tKA-Gl-R8s" firstAttribute="leading" secondItem="tzL-rj-szr" secondAttribute="centerX" constant="20" id="tkI-MP-kGN"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uw0-c9-Gpj" userLabel="TopGradient" customClass="GradientView" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uw0-c9-Gpj" userLabel="TopGradient" customClass="GradientView" customModule="Butter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -945,7 +945,7 @@
         <!--Anime Collection View Controller-->
         <scene sceneID="ZrX-93-8K1">
             <objects>
-                <collectionViewController id="e84-rg-Htw" customClass="AnimeCollectionViewController" customModule="Popcorn_Time_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="e84-rg-Htw" customClass="AnimeCollectionViewController" customModule="Butter" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="MRp-lD-QU9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -958,7 +958,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="coverCell" id="wW1-l2-5XW" customClass="PTCoverCollectionViewCell" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="coverCell" id="wW1-l2-5XW" customClass="PTCoverCollectionViewCell" customModule="Butter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="193" height="280"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1039,7 +1039,7 @@
         <!--Shows Collection View Controller-->
         <scene sceneID="Srh-eL-Jve">
             <objects>
-                <collectionViewController id="xaU-tV-opM" customClass="TVShowsCollectionViewController" customModule="Popcorn_Time_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="xaU-tV-opM" customClass="TVShowsCollectionViewController" customModule="Butter" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xOn-iu-d21">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1052,7 +1052,7 @@
                             <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="coverCell" id="3U9-ZN-ZGN" customClass="PTCoverCollectionViewCell" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="coverCell" id="3U9-ZN-ZGN" customClass="PTCoverCollectionViewCell" customModule="Butter" customModuleProvider="target">
                                 <rect key="frame" x="5" y="69" width="193" height="280"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1063,7 +1063,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="193" height="280"/>
                                             <animations/>
                                         </imageView>
-                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGf-cc-O40" customClass="GradientView" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGf-cc-O40" customClass="GradientView" customModule="Butter" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="216" width="193" height="64"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seasons" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8W-2K-ibc">
@@ -1205,11 +1205,11 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Movies-->
+        <!--VODO-->
         <scene sceneID="k6Y-g2-FOm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rUY-oc-168" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Movies" image="Movies" id="Fp3-rP-ViE"/>
+                    <tabBarItem key="tabBarItem" title="VODO" image="Movies" id="Fp3-rP-ViE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="x2p-EW-YdI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1268,7 +1268,7 @@
         <!--Watchlist Collection View Controller-->
         <scene sceneID="9IT-Cp-fZM">
             <objects>
-                <collectionViewController id="ylS-zb-YAx" customClass="WatchlistCollectionViewController" customModule="Popcorn_Time_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="ylS-zb-YAx" customClass="WatchlistCollectionViewController" customModule="Butter" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="bKd-4q-0kA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1307,7 +1307,7 @@
         <!--Favourites Collection View Controller-->
         <scene sceneID="lIV-vx-lQB">
             <objects>
-                <collectionViewController id="qME-W1-Ipy" customClass="FavouritesCollectionViewController" customModule="Popcorn_Time_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="qME-W1-Ipy" customClass="FavouritesCollectionViewController" customModule="Butter" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="hn7-Po-QcU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1320,7 +1320,7 @@
                             <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCell" id="3TD-6r-ber" customClass="PTCoverCollectionViewCell" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCell" id="3TD-6r-ber" customClass="PTCoverCollectionViewCell" customModule="Butter" customModuleProvider="target">
                                 <rect key="frame" x="5" y="144" width="193" height="280"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1331,7 +1331,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="193" height="280"/>
                                             <animations/>
                                         </imageView>
-                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6T-pE-D89" customClass="GradientView" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6T-pE-D89" customClass="GradientView" customModule="Butter" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="216" width="193" height="64"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cY6-6O-dF2">
@@ -1402,7 +1402,7 @@
                                     <segue destination="jiq-29-wuW" kind="show" id="y8j-6x-Pvb"/>
                                 </connections>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TVCell" id="MG3-Er-EeH" customClass="PTCoverCollectionViewCell" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TVCell" id="MG3-Er-EeH" customClass="PTCoverCollectionViewCell" customModule="Butter" customModuleProvider="target">
                                 <rect key="frame" x="203.5" y="144" width="193" height="280"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1413,7 +1413,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="193" height="280"/>
                                             <animations/>
                                         </imageView>
-                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOE-3F-K8j" customClass="GradientView" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOE-3F-K8j" customClass="GradientView" customModule="Butter" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="216" width="193" height="64"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seasons" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kON-H0-ndO">
@@ -1493,7 +1493,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="favHeader" id="SXB-E3-7Pr" customClass="FavouritesHeaderCollectionReusableView" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="favHeader" id="SXB-E3-7Pr" customClass="FavouritesHeaderCollectionReusableView" customModule="Butter" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="64" width="600" height="75"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
@@ -1603,10 +1603,10 @@
             </objects>
             <point key="canvasLocation" x="882" y="1559"/>
         </scene>
-        <!--Loading View Controller-->
+        <!--Butter Loading View Controller-->
         <scene sceneID="8M5-CN-kJo">
             <objects>
-                <viewController storyboardIdentifier="loadingViewController" id="bpF-BT-5hX" customClass="PTLoadingViewController" customModule="Popcorn_Time_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loadingViewController" id="bpF-BT-5hX" customClass="ButterLoadingViewController" customModule="Butter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="edO-5f-6wJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wYT-2i-xjG"/>
@@ -1619,7 +1619,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <animations/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yOp-a8-DP1" customClass="ILTranslucentView" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yOp-a8-DP1" customClass="ILTranslucentView" customModule="Butter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1m-ma-4D9" userLabel="Container View">
@@ -1765,7 +1765,7 @@
         <!--Show Detail View Controller-->
         <scene sceneID="lkC-UA-UJU">
             <objects>
-                <viewController id="cVU-AG-ZUd" customClass="TVShowDetailViewController" customModule="Popcorn_Time_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cVU-AG-ZUd" customClass="TVShowDetailViewController" customModule="Butter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wcr-av-GDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="UW5-20-lLA"/>
@@ -1799,7 +1799,7 @@
                                                     <constraint firstAttribute="height" constant="745" id="2TZ-Ta-UZT"/>
                                                 </constraints>
                                             </imageView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzL-I8-i9V" customClass="ILTranslucentView" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzL-I8-i9V" customClass="ILTranslucentView" customModule="Butter" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="232" width="600" height="800"/>
                                                 <subviews>
                                                     <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Py-Hk-F7W">
@@ -1852,7 +1852,7 @@
                                                         <animations/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <prototypes>
-                                                            <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="episodeCell" rowHeight="55" id="lCB-eC-2Nw" customClass="PTEpisodeTableViewCell" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                                                            <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="episodeCell" rowHeight="55" id="lCB-eC-2Nw" customClass="PTEpisodeTableViewCell" customModule="Butter" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28" width="600" height="55"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lCB-eC-2Nw" id="S7h-OU-Jc0">
@@ -1946,7 +1946,7 @@
                                     <constraint firstItem="L7b-FE-Ys4" firstAttribute="leading" secondItem="LfU-6F-JpG" secondAttribute="leading" id="XcH-2J-uBT"/>
                                 </constraints>
                             </scrollView>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azZ-70-b2W" userLabel="BottomBar" customClass="ILTranslucentView" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azZ-70-b2W" userLabel="BottomBar" customClass="ILTranslucentView" customModule="Butter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="450" width="600" height="101"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxK-Gm-Wth">
@@ -1998,7 +1998,7 @@
                                     <constraint firstAttribute="trailing" secondItem="zz3-HH-crh" secondAttribute="trailing" id="o7A-xB-jP6"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6d6-SL-GeZ" userLabel="TopGradient" customClass="GradientView" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6d6-SL-GeZ" userLabel="TopGradient" customClass="GradientView" customModule="Butter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -2011,7 +2011,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNh-Kn-jg5" customClass="GradientView" customModule="Popcorn_Time_iOS" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNh-Kn-jg5" customClass="GradientView" customModule="Butter" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="185" width="600" height="50"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

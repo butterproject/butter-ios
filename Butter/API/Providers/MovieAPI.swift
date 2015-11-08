@@ -15,7 +15,7 @@ class MovieAPI {
     let APIManager: ButterAPIManager = ButterAPIManager.sharedInstance
 	
 	static let genres = [
-		"All",
+		"All"/*,
 		"Action",
 		"Adventure",
 		"Animation",
@@ -38,59 +38,27 @@ class MovieAPI {
 		"Sport",
 		"Thriller",
 		"War",
-		"Western"
+		"Western"*/
 	]
 	
 	func load(page: Int, onCompletion: (newItems : Bool) -> Void) {
         //Build the query
 		
-        var urlParams = [
-            "limit" : "\(APIManager.amountToLoad)",
-            "page" : "\(page)",
-            "sort_by" : "seeds",
-            "query_term" : "\(APIManager.searchString)",
-            "quality" : "\(APIManager.quality)",
-            "lang" : "\(NSLocale.get2LetterLanguageCode())"
-        ]
-		
-		var genreStringForUrl = ""
-		for genre in APIManager.genres {
-			if genreStringForUrl == "" {
-				genreStringForUrl += genre
-			} else {
-				genreStringForUrl += "&genre[]=\(genre)"
-			}
-		}
-		urlParams["genre[]"] = genreStringForUrl
-				
-        let headers = [
-            "Host" : APIManager.moviesAPIEndpointCloudFlareHost
-        ]
-		
-        RestApiManager.sharedInstance.getJSONFromURL(APIManager.moviesAPIEndpoint + "list_movies_pct.json", headers: headers, parameters: urlParams)  { json in
+        RestApiManager.sharedInstance.getJSONFromURL(APIManager.moviesAPIEndpoint)  { json in
             
-			let movies = json["data","movies"]
-            for (_, movie) in movies {
+			let movies = json["downloads"]
+            for (index, movie) in movies {
                 
                 if !self.APIManager.isSearching {
-                    if let _ = self.APIManager.cachedMovies[movie["imdb_code"].string!] { //Check it hasn't already been loaded
-                        if let iteID = movie["id"].int {
-                            if (movie["state"].string == "ok") { //Check that the movie is OK
-                                let ite: ButterItem = ButterItem(id: iteID, torrents: movie["torrents"])
-                                ite.setProperty("title", val: movie["title"].string!)
-                                let title = ite.getProperty("title") as! String!
-                                print("Duplicate movie: \(title) - From page: \(page + 1)")
-                                continue
-                            }
-                        }
+                    if let _ = self.APIManager.cachedMovies[movie["ImdbCode"].string!] { //Check it hasn't already been loaded
+                        let title = movie["MovieTitleClean"].string!
+                        print("Duplicate movie: \(title) - From page: \(page + 1)")
+                        continue
                     }
                 }
                 
-                if let iteID = movie["id"].int {
-                    if (movie["state"].string == "ok") { //Check that the movie is OK
-                        self.createMovieFromJson(iteID, movie)
-                    }
-                }
+                self.createMovieFromJson(Int(index)!, movie)
+                
             }
 			
             onCompletion(newItems: movies.count > 0)
@@ -122,29 +90,30 @@ class MovieAPI {
     }
     
     func createMovieFromJson(id : Int, _ json : JSON) -> ButterItem {
-        let ite: ButterItem = ButterItem(id: id, torrents: json["torrents"])
-        ite.setProperty("title", val: json["title"].string!)
-        ite.setProperty("description", val: json["description_full"].string!)
-        ite.setProperty("rating", val: json["rating"].double!)
-        ite.setProperty("imdb", val: json["imdb_code"].string!)
-        ite.setProperty("year", val: json["year"].int!)
-        ite.setProperty("runtime", val: json["runtime"].int!)
-        ite.setProperty("coverURL", val: json["medium_cover_image"].string!)
-        
-        var genres: String = ""
-        for (index, subJson) in json["genres"] {
-            if (index != "0") {
-                genres += ", \(subJson.string!)"
+        let ite: ButterItem = ButterItem(id: id, torrentURL:json["TorrentUrl"].string!, quality:json["Quality"].string!, size:json["Size"].string!)
+        ite.setProperty("title", val: json["MovieTitleClean"].string!)
+        ite.setProperty("description", val: json["Synopsis"].string!)
+        if let tmp = json["MovieRating"].string {
+            ite.setProperty("rating", val: Float(tmp)!)
+        }
+        ite.setProperty("imdb", val: json["ImdbCode"].string!)
+        if let tmp = json["MovieYear"].string {
+            ite.setProperty("year", val: Int(tmp)!)
+        }
+        if let tmp = json["Runtime"].string {
+            if (tmp != "") {
+                ite.setProperty("runtime", val: Int(tmp)!)
             } else {
-                genres += subJson.string!
+                ite.setProperty("runtime", val: 0)
             }
         }
-        ite.setProperty("genres", val: genres)
+        ite.setProperty("coverURL", val: json["CoverImage"].string!)
+        ite.setProperty("genres", val: json["Genre"].string!)
         
         if (self.APIManager.isSearching) {
-            self.APIManager.searchResults[json["imdb_code"].string!] = ite
+            self.APIManager.searchResults[json["ImdbCode"].string!] = ite
         } else {
-            self.APIManager.cachedMovies[json["imdb_code"].string!] = ite
+            self.APIManager.cachedMovies[json["ImdbCode"].string!] = ite
         }
         
         RestApiManager.sharedInstance.loadImage(ite.getProperty("coverURL") as! String, onCompletion: { image in

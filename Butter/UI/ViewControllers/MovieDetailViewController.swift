@@ -22,9 +22,10 @@ class MovieDetailViewController: UIViewController, ButterLoadingViewControllerDe
     @IBOutlet var qualityBtn: UIButton!
 	@IBOutlet weak var subtitlesButton: UIButton!
     
+    var loadingVC: ButterLoadingViewController?
     var currentItem: ButterItem?
     
-    var quality: String = "1080p"
+    var quality: String = "720p"
     var qualityIDs :[String] = []
 	
 	var subtitles = [String : String]()
@@ -231,35 +232,23 @@ class MovieDetailViewController: UIViewController, ButterLoadingViewControllerDe
         let wifiOnly : Bool = !NSUserDefaults.standardUserDefaults().boolForKey("StreamOnCellular")
         
         if !wifiOnly || onWifi {
-            let loadingVC = self.storyboard?.instantiateViewControllerWithIdentifier("loadingViewController") as! ButterLoadingViewController
-            loadingVC.delegate = self
-            loadingVC.status = "Downloading..."
-            loadingVC.loadingTitle = currentItem!.getProperty("title") as? String
-            loadingVC.bgImg = coverImageView.image!
-            loadingVC.modalPresentationStyle = UIModalPresentationStyle.FullScreen
-            self.presentViewController(loadingVC, animated: true, completion: nil)
+            loadingVC = self.storyboard?.instantiateViewControllerWithIdentifier("loadingViewController") as! ButterLoadingViewController
+            loadingVC!.delegate = self
+            loadingVC!.status = "Downloading..."
+            loadingVC!.loadingTitle = currentItem!.getProperty("title") as? String
+            loadingVC!.bgImg = coverImageView.image!
+            loadingVC!.modalPresentationStyle = UIModalPresentationStyle.FullScreen
+            self.presentViewController(loadingVC!, animated: true, completion: nil)
             
-            let magnetLink: String = ButterAPIManager.sharedInstance.makeMagnetLink(currentItem!.torrents[quality]!.hash, title: currentItem!.getProperty("title") as! String)
             let runtime = currentItem!.getProperty("runtime") as! Int
             
-            ButterTorrentStreamer.sharedStreamer().startStreamingFromFileOrMagnetLink(magnetLink, runtime: Int32(runtime), progress: { (status) -> Void in
-                
-                loadingVC.progress = status.bufferingProgress
-                loadingVC.speed = Int(status.downloadSpeed)
-                loadingVC.seeds = Int(status.seeds)
-                loadingVC.peers = Int(status.peers)
-                
-                }, readyToPlay: { (url) -> Void in
-                    loadingVC.dismissViewControllerAnimated(false, completion: nil)
-                    
-                    let vdl = VDLPlaybackViewController(nibName: "VDLPlaybackViewController", bundle: nil)
-                    vdl.delegate = self
-                    self.navigationController?.presentViewController(vdl, animated: true, completion: nil)
-                    vdl.playMediaFromURL(url)
-                    
-                }, failure: { (error) -> Void in
-                    loadingVC.dismissViewControllerAnimated(true, completion: nil)
-            })
+            if (currentItem!.torrents[quality]!.hash != "") {
+                let magnetLink: String = ButterAPIManager.sharedInstance.makeMagnetLink(currentItem!.torrents[quality]!.hash, title: currentItem!.getProperty("title") as! String)
+                loadMovieTorrent(magnetLink, runtime: runtime)
+            } else {
+                RestApiManager.sharedInstance.makeAsyncDataRequest(currentItem!.torrents[quality]!.url, onCompletion: saveTorrentToFile)
+            }
+            
         } else {
             let errorAlert = UIAlertController(title: "Cellular Data is Turned Off for streaming", message: "To enable it please go to settings.", preferredStyle: UIAlertControllerStyle.Alert)
             errorAlert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: { (action: UIAlertAction!) in }))
@@ -271,6 +260,45 @@ class MovieDetailViewController: UIViewController, ButterLoadingViewControllerDe
             }))
             self.presentViewController(errorAlert, animated: true, completion: nil)
         }
+    }
+    
+    func saveTorrentToFile(torrent: NSData) {
+        let url: NSURL = NSURL(string: currentItem!.torrents[quality]!.url)!
+        let runtime = currentItem!.getProperty("runtime") as! Int
+        
+        let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first! as NSURL
+        let destinationUrl = documentsUrl.URLByAppendingPathComponent(url.lastPathComponent!)
+        if NSFileManager().fileExistsAtPath(destinationUrl.path!) {
+            print("file already exists [\(destinationUrl.path!)]")
+        } else {
+            if torrent.writeToURL(destinationUrl, atomically: true) {
+                print("file saved [\(destinationUrl.path!)]")
+                loadMovieTorrent(destinationUrl.path!, runtime: runtime)
+            } else {
+                print("error saving file")
+            }
+        }
+    }
+    
+    func loadMovieTorrent(torrURL: String, runtime: Int) {
+        ButterTorrentStreamer.sharedStreamer().startStreamingFromFileOrMagnetLink(torrURL, runtime: Int32(runtime), progress: { (status) -> Void in
+            
+            self.loadingVC!.progress = status.bufferingProgress
+            self.loadingVC!.speed = Int(status.downloadSpeed)
+            self.loadingVC!.seeds = Int(status.seeds)
+            self.loadingVC!.peers = Int(status.peers)
+            
+            }, readyToPlay: { (url) -> Void in
+                self.loadingVC!.dismissViewControllerAnimated(false, completion: nil)
+                
+                let vdl = VDLPlaybackViewController(nibName: "VDLPlaybackViewController", bundle: nil)
+                vdl.delegate = self
+                self.navigationController?.presentViewController(vdl, animated: true, completion: nil)
+                vdl.playMediaFromURL(url)
+                
+            }, failure: { (error) -> Void in
+                self.loadingVC!.dismissViewControllerAnimated(true, completion: nil)
+        })
     }
 	
 	@IBAction func coverTapped(sender: AnyObject) {
